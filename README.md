@@ -1,4 +1,8 @@
-### Project Title
+
+<h2>
+  <img src="images/buyit_logo_.png" alt="BuyIt Logo" width="40" style="vertical-align: middle; margin-right: 10px;">
+  BuyIt! Image Classification
+</h2>
 
 **Author**
 Lori Smith
@@ -8,6 +12,10 @@ Lori Smith
 This project introduces a web-based e-commerce platform designed to support small and local businesses by offering customers a visual search experience powered by image classification. The platform enables users to upload or browse product images and discover visually similar items being sold by nearby merchants. By leveraging machine learning, this tool bridges the gap between small retailers and the advanced search capabilities available to large e-commerce platforms.
 
 The end goal is twofold: to improve discoverability for small merchants and to provide customers with a more intuitive and visual way to shop locally. This project combines frontend development, backend systems, and image-based AI to deliver a real-world solution that promotes both innovation and community impact.
+
+<p align="center">
+  <img src="images/buyit_website.png" alt="BuyIt Website" width="400"/>
+</p>
 
 #### Rationale
 Why should anyone care about this question?
@@ -45,26 +53,29 @@ I plan to implement and compare the following classification algorithms to deter
 #### Results
 What did your research find?
 
-The initial model searches had mixed results.  I ran KNN, DecisionTree and Logistic Classifier models. SVN would not run with all of the data.  After using decompsition, I reran the model and came up with very good initial results at 78% accuracy. 
+The initial model runs had mixed results. I trained and evaluated KNN, Decision Tree, and Logistic Regression models. SVM would not run with the full dataset due to memory constraints. After applying dimensionality reduction, I reran the models and achieved promising results with 78% accuracy. The images below show some of the misclassified samples. Viewing the actual images helps explain why the model may have struggled to classify them correctly.
 
 ![Description](images/incorrect_predictions.png)
 Here were some of the results based on my initial tests.
 The most successful model in my initial tests was the KNN Classifier with a 72.5% accuracy. With 20462 items in the dataset, SVN was stuck. 
-I found that SVN was taking too long to process after a half hour of waiting for a result. I ended up using decomposition with PCA to reduce the number of points to send to SVN down to 100 and the results were excellent.  The accuracy went up to 78% even with some obvious issues that existed in the labeling and dataset.
+I found that SVN was taking too long to process after a half hour of waiting for a result. I ended up using decomposition with PCA to reduce the number of points to send to SVN down to 100.  This significantly improved performance, and the accuracy increased to 78%, despite some known issues in the dataset and label quality.
 
 ![Description](images/initial_model_accuracies.png)
 ![Description](images/test_train_acc.png)
 
 After a few tweaks in the data the graph above shows the test and training data accuracies.
 
+![Description](images/heatmap.png)
+The heatmap image above confirmed what I saw when looking through the values of the prediction data. The shirts, t-shirt, and tops labels were often incorrectly categorized.  The different subcategories of shoes were also commonly misclassified.  Sports shoes and casual shoes often confused the models as well.
+
 #### Next steps
 What suggestions do you have for next steps?
 
-A better dataset with more accurate labeling would help.  Also some of the data is shown worn on a user making it harder to categorize.  For example a man is wearing a jacket and a scarf and the image is classified as jacket when it should be classified as scarf.  Some of the mistakes that are being made are because of poor labeling. 
+A better dataset with more accurate labeling would help.  Also some of the data is shown worn on a user making it harder to categorize.  For example a man is wearing a jacket and a scarf and the image is classified as jacket when it should be classified as scarf.  Some of the mistakes that are being made are because of poor labeling. I did drop the category "Free Gifts" because that was not helpful information in defining a classification for the item.
 
 Instead of changing my dataset right now, I could choose to consolidate some of the categories.  For example, shirts, t-shirts, and tops are all categories and they are consistently getting miscategorized.  By making one "tops" category that combines all of these types the results will likely be better.  I am hesitant to try that until I see what the results of neural networking are.  Since SVN with decomposition was able to get to 78% on the test set, I want to see what the results are with neural networking before further altering the dataset.  Perhaps it will be able to distinguish between some of the categories that the other models weren't able to. 
 
-Also I am excited to learn about neural networks and apply the model to the dataset.
+I am excited to explore neural networks in the upcoming module. Once we cover them in class, I plan to revisit this project and apply a neural network model to the dataset to compare its performance with the traditional machine learning methods used so far.
 
 #### Outline of project
 
@@ -72,3 +83,10 @@ Also I am excited to learn about neural networks and apply the model to the data
 
 
 ##### Contact and Further Information
+**Name:** Lori Smith  
+
+**Email:** lorigreensmith@gmail.com
+
+**GitHub:** [github.com/lorigreensmith06](https://github.com/lorigreensmith06)  
+
+This project is part of the AI/ML Capstone and was completed using Python and Scikit-learn. For more details or source code, please visit the GitHub repository linked above.
