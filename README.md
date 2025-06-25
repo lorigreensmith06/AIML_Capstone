@@ -30,7 +30,6 @@ From a broader social perspective, this type of platform strengthens local econo
 How can image classification be used to support visual product search in a local shopping platform like BuyIt.store, which connects small businesses with nearby customers?
 
 #### Data Sources
-What data will you use to answer you question?
 
 I am using the Fashion Product Images Dataset available on Kaggle:
 
