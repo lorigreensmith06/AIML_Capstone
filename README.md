@@ -18,7 +18,6 @@ The end goal is twofold: to improve discoverability for small merchants and to p
 </p>
 
 #### Rationale
-Why should anyone care about this question?
 
 Small business needs a way to compete with large business.  Using some of the AI image tools helps them to have similar tools that big tech has.
 
@@ -27,7 +26,6 @@ This project matters because it empowers small, local businesses to compete with
 From a broader social perspective, this type of platform strengthens local economies and fosters community connections. On a personal level, this project also enables me to gain experience with image-based machine learning, which is a step toward solving more complex problems involving 3D graphics and AI—my background and future goal.
 
 #### Research Question
-What are you trying to answer?
 
 How can image classification be used to support visual product search in a local shopping platform like BuyIt.store, which connects small businesses with nearby customers?
 
@@ -40,7 +38,6 @@ Dataset: https://www.kaggle.com/datasets/paramaggarwal/fashion-product-images-da
 Sample Classifier: https://www.kaggle.com/code/paramaggarwal/fashion-product-images-classifierLinks to an external site.
 
 #### Methodology
-What methods are you using to answer the question?  
 
 I plan to implement and compare the following classification algorithms to determine which best classifies product images:
 
@@ -51,7 +48,6 @@ I plan to implement and compare the following classification algorithms to deter
 * Neural Networks
 
 #### Results
-What did your research find?
 
 The initial model runs had mixed results. I trained and evaluated KNN, Decision Tree, and Logistic Regression models. SVM would not run with the full dataset due to memory constraints. After applying dimensionality reduction, I reran the models and achieved promising results with 78% accuracy. The images below show some of the misclassified samples. Viewing the actual images helps explain why the model may have struggled to classify them correctly.
 
@@ -69,7 +65,6 @@ After a few tweaks in the data the graph above shows the test and training data 
 The heatmap image above confirmed what I saw when looking through the values of the prediction data. The shirts, t-shirt, and tops labels were often incorrectly categorized.  The different subcategories of shoes were also commonly misclassified.  Sports shoes and casual shoes often confused the models as well.
 
 #### Next steps
-What suggestions do you have for next steps?
 
 A better dataset with more accurate labeling would help.  Also some of the data is shown worn on a user making it harder to categorize.  For example a man is wearing a jacket and a scarf and the image is classified as jacket when it should be classified as scarf.  Some of the mistakes that are being made are because of poor labeling. I did drop the category "Free Gifts" because that was not helpful information in defining a classification for the item.
 
