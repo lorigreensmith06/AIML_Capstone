@@ -52,8 +52,8 @@ The initial model runs had mixed results. I trained and evaluated KNN, Decision 
 
 ![Description](images/incorrect_predictions.png)
 Here were some of the results based on my initial tests.
-The most successful model in my initial tests was the KNN Classifier with a 72.5% accuracy. With 20462 items in the dataset, SVN was stuck. 
-I found that SVN was taking too long to process after a half hour of waiting for a result. I ended up using decomposition with PCA to reduce the number of points to send to SVN down to 100.  This significantly improved performance, and the accuracy increased to 78%, despite some known issues in the dataset and label quality.
+The most successful model in my initial tests was the KNN Classifier with a 72.5% accuracy. With 20462 items in the dataset, SVM was stuck. 
+I found that SVM was taking too long to process after a half hour of waiting for a result. I ended up using decomposition with PCA to reduce the number of points to send to SVM down to 100.  This significantly improved performance, and the accuracy increased to 78%, despite some known issues in the dataset and label quality.
 
 ![Description](images/initial_model_accuracies.png)
 ![Description](images/test_train_acc.png)
@@ -67,7 +67,7 @@ The heatmap image above confirmed what I saw when looking through the values of 
 
 A better dataset with more accurate labeling would help.  Also some of the data is shown worn on a user making it harder to categorize.  For example a man is wearing a jacket and a scarf and the image is classified as jacket when it should be classified as scarf.  Some of the mistakes that are being made are because of poor labeling. I did drop the category "Free Gifts" because that was not helpful information in defining a classification for the item.
 
-Instead of changing my dataset right now, I could choose to consolidate some of the categories.  For example, shirts, t-shirts, and tops are all categories and they are consistently getting miscategorized.  By making one "tops" category that combines all of these types the results will likely be better.  I am hesitant to try that until I see what the results of neural networking are.  Since SVN with decomposition was able to get to 78% on the test set, I want to see what the results are with neural networking before further altering the dataset.  Perhaps it will be able to distinguish between some of the categories that the other models weren't able to. 
+Instead of changing my dataset right now, I could choose to consolidate some of the categories.  For example, shirts, t-shirts, and tops are all categories and they are consistently getting miscategorized.  By making one "tops" category that combines all of these types the results will likely be better.  I am hesitant to try that until I see what the results of neural networking are.  Since SVM with decomposition was able to get to 78% on the test set, I want to see what the results are with neural networking before further altering the dataset.  Perhaps it will be able to distinguish between some of the categories that the other models weren't able to. 
 
 I am excited to explore neural networks in the upcoming module. Once we cover them in class, I plan to revisit this project and apply a neural network model to the dataset to compare its performance with the traditional machine learning methods used so far.
 
