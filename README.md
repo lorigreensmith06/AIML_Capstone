@@ -21,7 +21,7 @@ The end goal is twofold: to improve discoverability for small merchants and to p
 
 Small business needs tools to compete with large corporations.  Using some of the AI image tools helps them to have similar tools that big tech has.
 
-This project matters because it empowers small, local businesses to compete with large e-commerce platforms like Amazon. By enabling customers to visually search for products available nearby, we help drive foot traffic and online orders to independent shops that often struggle with visibility online. For consumers, it provides a fast, intuitive way to find what they need locally�potentially reducing wait times and environmental impact from shipping.
+This project matters because it empowers small, local businesses to compete with large e-commerce platforms like Amazon. By enabling customers to visually search for products available nearby, we help drive foot traffic and online orders to independent shops that often struggle with visibility online. For consumers, it provides a fast, intuitive way to find what they need locally, potentially reducing wait times and environmental impact from shipping.
 
 From a broader social perspective, this type of platform strengthens local economies and fosters community connections. On a personal level, this project also enables me to gain experience with image-based machine learning, which is a step toward solving more complex problems involving 3D graphics and AI, my background and future goal.
 
